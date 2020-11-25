@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.10)
+project(tdtrobotdecision)
+set(CMAKE_CXX_STANDARD 14)
+find_package(OpenCV 4 REQUIRED)
+add_library(tdtrobotdecision SHARED robot_decision.h robot_decision.cpp)
+target_link_libraries(tdtrobotdecision ${OpenCV_LIBS} -lpthread -lm)
