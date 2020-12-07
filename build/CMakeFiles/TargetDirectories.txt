@@ -1,0 +1,3 @@
+/home/sun/ssssss/build/CMakeFiles/rebuild_cache.dir
+/home/sun/ssssss/build/CMakeFiles/lex.dir
+/home/sun/ssssss/build/CMakeFiles/edit_cache.dir
