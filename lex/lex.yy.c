@@ -351,8 +351,8 @@ static void yynoreturn yy_fatal_error ( const char* msg  );
 	(yy_hold_char) = *yy_cp; \
 	*yy_cp = '\0'; \
 	(yy_c_buf_p) = yy_cp;
-#define YY_NUM_RULES 5
-#define YY_END_OF_BUFFER 6
+#define YY_NUM_RULES 3
+#define YY_END_OF_BUFFER 4
 /* This struct is not used in this scanner,
    but its presence is necessary. */
 struct yy_trans_info
@@ -360,10 +360,10 @@ struct yy_trans_info
 	flex_int32_t yy_verify;
 	flex_int32_t yy_nxt;
 	};
-static const flex_int16_t yy_accept[12] =
+static const flex_int16_t yy_accept[20] =
     {   0,
-        0,    0,    6,    4,    5,    4,    3,    0,    2,    1,
-        0
+        0,    0,    4,    2,    3,    2,    2,    1,    0,    0,
+        1,    0,    0,    0,    0,    0,    0,    0,    0
     } ;
 
 static const YY_CHAR yy_ec[256] =
@@ -379,9 +379,9 @@ static const YY_CHAR yy_ec[256] =
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    3,
 
+        1,    1,    1,    1,    1,    1,    1,    1,    1,    4,
+        1,    1,    5,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    4,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    5,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
@@ -400,31 +400,33 @@ static const YY_CHAR yy_ec[256] =
 
 static const YY_CHAR yy_meta[6] =
     {   0,
-        1,    1,    2,    2,    2
+        1,    1,    1,    1,    1
     } ;
 
-static const flex_int16_t yy_base[13] =
+static const flex_int16_t yy_base[20] =
     {   0,
-        0,    0,    9,   10,   10,    3,   10,    0,   10,   10,
-       10,    6
+        0,    0,   21,   22,   22,    3,    6,   22,    9,   16,
+       22,   15,   12,    0,    0,    0,   14,    0,   22
     } ;
 
-static const flex_int16_t yy_def[13] =
+static const flex_int16_t yy_def[20] =
     {   0,
-       11,    1,   11,   11,   11,   11,   11,   12,   11,   11,
-        0,   11
+       19,    1,   19,   19,   19,   19,   19,   19,   19,    9,
+       19,    9,   19,    9,    9,    9,    9,    9,    0
     } ;
 
-static const flex_int16_t yy_nxt[16] =
+static const flex_int16_t yy_nxt[28] =
     {   0,
-        4,    5,    6,    7,    4,    8,    9,   10,   11,    3,
-       11,   11,   11,   11,   11
+        4,    5,    6,    7,    8,    9,   10,   11,   12,   13,
+       11,   11,   11,   11,   16,   17,   11,   18,   15,   14,
+       19,    3,   19,   19,   19,   19,   19
     } ;
 
-static const flex_int16_t yy_chk[16] =
+static const flex_int16_t yy_chk[28] =
     {   0,
-        1,    1,    1,    1,    1,    6,    6,   12,    3,   11,
-       11,   11,   11,   11,   11
+        1,    1,    1,    1,    1,    6,    6,    6,    7,    7,
+        7,    9,    9,    9,   13,   13,   13,   17,   12,   10,
+        3,   19,   19,   19,   19,   19,   19
     } ;
 
 static yy_state_type yy_last_accepting_state;
@@ -443,9 +445,10 @@ int yy_flex_debug = 0;
 char *yytext;
 #line 1 "lex.l"
 #line 2 "lex.l"
-int user_select,total=0;
-#line 448 "lex.yy.c"
-#line 449 "lex.yy.c"
+ /*sun zhong wu*/
+	int usr_select,num;
+#line 451 "lex.yy.c"
+#line 452 "lex.yy.c"
 
 #define INITIAL 0
 
@@ -662,9 +665,11 @@ YY_DECL
 		}
 
 	{
-#line 4 "lex.l"
+#line 6 "lex.l"
 
-#line 668 "lex.yy.c"
+#line 8 "lex.l"
+	
+#line 673 "lex.yy.c"
 
 	while ( /*CONSTCOND*/1 )		/* loops until end-of-file is reached */
 		{
@@ -691,13 +696,13 @@ yy_match:
 			while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 				{
 				yy_current_state = (int) yy_def[yy_current_state];
-				if ( yy_current_state >= 12 )
+				if ( yy_current_state >= 20 )
 					yy_c = yy_meta[yy_c];
 				}
 			yy_current_state = yy_nxt[yy_base[yy_current_state] + yy_c];
 			++yy_cp;
 			}
-		while ( yy_base[yy_current_state] != 10 );
+		while ( yy_base[yy_current_state] != 22 );
 
 yy_find_action:
 		yy_act = yy_accept[yy_current_state];
@@ -723,46 +728,26 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 5 "lex.l"
-{printf("请选糖：1、太妃糖  2、巧克力\n");
-		scanf("%d",&user_select);
-		if(user_select==1) printf("你选择了太妃糖\n");
-		if(user_select==2) printf("你选择了巧克力\n");
-		total++;
-		}
+#line 9 "lex.l"
+{printf("请选择糖果：1、太妃糖 2、巧克力\n");
+	scanf("%d",&usr_select);
+	if(usr_select==1) printf("你选择了太妃糖！\n");
+	if(usr_select==2) printf("你选择了巧克力！\n");
+	num++;
+	}
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 11 "lex.l"
-{printf("请选糖：1、太妃糖  2、巧克力\n");
-		scanf("%d",&user_select);
-		if(user_select==1) printf("你选择了太妃糖\n");
-		if(user_select==2) printf("你选择了巧克力\n");
-		total++;
-		}
+#line 15 "lex.l"
+{printf("你投入了错误的硬币！输入非法！\n");
+     	}
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 17 "lex.l"
-{printf("请选糖：1、太妃糖  2、巧克力\n");
-                scanf("%d",&user_select);
-                if(user_select==1) printf("你选择了太妃糖\n");
-                if(user_select==2) printf("你选择了巧克力\n");
-		total++;
-		}
-	YY_BREAK
-case 4:
-YY_RULE_SETUP
-#line 23 "lex.l"
-{printf("投币非法\n");
-		}
-	YY_BREAK
-case 5:
-YY_RULE_SETUP
-#line 25 "lex.l"
+#line 18 "lex.l"
 ECHO;
 	YY_BREAK
-#line 766 "lex.yy.c"
+#line 751 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1059,7 +1044,7 @@ static int yy_get_next_buffer (void)
 		while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 			{
 			yy_current_state = (int) yy_def[yy_current_state];
-			if ( yy_current_state >= 12 )
+			if ( yy_current_state >= 20 )
 				yy_c = yy_meta[yy_c];
 			}
 		yy_current_state = yy_nxt[yy_base[yy_current_state] + yy_c];
@@ -1087,11 +1072,11 @@ static int yy_get_next_buffer (void)
 	while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 		{
 		yy_current_state = (int) yy_def[yy_current_state];
-		if ( yy_current_state >= 12 )
+		if ( yy_current_state >= 20 )
 			yy_c = yy_meta[yy_c];
 		}
 	yy_current_state = yy_nxt[yy_base[yy_current_state] + yy_c];
-	yy_is_jam = (yy_current_state == 11);
+	yy_is_jam = (yy_current_state == 19);
 
 		return yy_is_jam ? 0 : yy_current_state;
 }
@@ -1767,14 +1752,17 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 25 "lex.l"
+#line 18 "lex.l"
 
 main()
 {
-	printf("请投币\n");
+	system("PAUSE");
+	printf("请投币：\nn:五美元  d:十美元  q:二十五美元\n");
 	yylex();
-	printf("共购买了%d块糖果\n",total);
+	printf("你一共买了%d块糖\n",num);
+	return 0;
 }
 int yywrap()
 {return 1;}
+
 
